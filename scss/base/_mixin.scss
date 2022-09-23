@@ -1,0 +1,17 @@
+@mixin reset{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+}
+
+
+@mixin ancho-alto($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin max-ancho-alto($max-width, $max-height) {
+    max-width: $max-width;
+    max-height: $max-height;
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina de datos">
+    <meta name="keywords" content="Contacto,Informacion,Datos">
+     <!--Link-CSS--> 
+     <link rel="stylesheet" href="../css/styles.css">
+     <!--Bootstrap-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <title>Datos</title>
+</head>
+<body>
+
+  <header class="container-fluid">
+    <div class="row">
+        <div class="logo col-8">
+          <a href="../index.html">
+            <img src="../iconos/logo-principal.png" alt="logo de una percha con el titulo OnlyMen">
+          </a>
+            <p>OnlyMen</p>
+        </div>    
+       
+        <nav class="navbar navbar-expand-lg col-4" style="width: 4rem;">
+            <div class="container-fluid">
+              <a class="menu navbar-brand">Menu</a>
+              <button class="boton navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="hamburguesa collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../paginas/remeras.html">Remeras</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../paginas/pantalones.html">Pantalones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../paginas/buzos.html">Buzos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../paginas/camperas.html">Camperas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../paginas/contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+ <fieldset >
+    <legend>Completa tus datos</legend>
+  <form>
+      <label for="nombre">Nombre:</label>
+      <input id="nombre" type="text" name="nombre" style="height: 1.5rem;">
+      <label for="apellido">Apellido:</label>
+      <input id="apellido" type="text" name="apellido" style="width: 8rem; height: 1.5rem;">
+      
+      <label for="dni">DNI:</label>
+      <input type="number" name="num" style="width: 7rem; height: 1.5rem;">
+
+      <label for="cel">Celular:</label>
+      <input type="number" name="num" style="width: 7rem; height: 1.5rem;">
+
+      <label for="email">Email:</label>
+      <input id="email" type="email" name="email" style="height: 1.5rem;" >
+
+     <label for="cp">CP:</label>
+     <input type="number" name="num" style="width: 4rem; height: 1.5rem;">
+
+  <label for="Provincia">
+      Selecciona tu provincia
+  </label>
+  <select name="Provincia" style="width: 7.5rem; height: 1.5rem;" >
+      <option value="Buenos Aires"> Buenos Aires</option>
+      <option value="Ciudad autonoma de Buenos Aires"> C.A.B.A </option>
+      <option value="Catamarca"> Catamarca </option>
+      <option value="Chcaco"> Chaco</option>
+      <option value="Chubut"> Chubut </option>
+      <option value="Cordoba"> Cordoba </option>
+      <option value="Corrientes"> Corrientes</option>
+      <option value="Enre Rios"> Entre Rios </option>
+      <option value="Formosa"> Formosa </option>
+      <option value="Jujuy"> Jujuy</option>
+      <option value="La Pampa"> La Pampa </option>
+      <option value="La Rioja"> La Rioja </option>
+      <option value="Mendoza"> Mendoza</option>
+      <option value="Misiones"> Misiones </option>
+      <option value="Neuquen"> Neuquen</option>
+      <option value="Rio Negro"> Rio Negro </option>
+      <option value="Salta"> Salta</option>
+      <option value="San Juan"> San Juan </option>
+      <option value="San Luis"> San Luis</option>
+      <option value="Santa Cruz"> Santa Cruz </option>
+      <option value="Santa Fe"> Santa Fe </option>
+      <option value="Santiago del Estero"> Santiago del Estero</option>
+      <option value="Tierra del Fuego"> Tierra del Fuego </option>
+      <option value="Tucuman"> Tucuman</option>
+  </select>
+</form>
+
+  <div>
+    <a href="../index.html">
+  <input type="submit" value="Cancelar">
+ </a>
+ <a href="../paginas/final-de-compra.html">
+  <input type="submit" value="Enviar">
+ </a>
+  
+</fieldset>
+
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col-5">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img src="../iconos/facebook.png" alt="icono de facebook">
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" >
+            <img src="../iconos/instagram.png" alt="icono de instagram">
+          </a>
+          <a href="https://twitter.com/?lang=es" target="_blank">
+            <img src="../iconos/twitter.png" alt="icono de twitter">
+          </a>
+        </div>  
+        <div class="col-7">
+          <p class="atencion">Atencion al cliente: <br>
+            Lun a Sab de 9:00 a 21:00
+          </p>
+        </div>
+        <p class="derechos">Todos los derechos reservados</p>
+    </div>
+</footer>
+  
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+
+</body>
+</html>

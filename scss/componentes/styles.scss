@@ -1,0 +1,554 @@
+@import "base/variables";
+@import "base/mixin";
+
+*{
+    @include reset
+}
+
+header{ 
+    z-index: 2;
+    position: sticky;
+    top: 0;  
+    @include ancho-alto(100%, 13vh);
+    background-color: $color-principal;
+    div{
+        display: flex;
+        .logo{
+            img{
+                @include max-ancho-alto(2.5rem, 2rem);
+                margin-top: 0.5rem;
+            }
+            p{
+                margin-top: 1rem;
+            }
+        }
+        nav{
+            div{
+                background-color: $color-principal;
+                .menu{
+                    display: none;   
+                }
+                div{
+                    ul{ 
+                        li:hover{
+                            background-color: $color-secundario;
+                            transform: scale(0.9);
+                            box-shadow: 1px 1px 1px black;
+                        }
+                    }
+                }
+            }
+        }
+    }       
+}
+
+    
+main{
+    background-color: $color-fondo;
+    padding-bottom: 1rem;
+    h1{
+        text-align: center;
+        font-size: 1.2rem;
+        border: 1px solid $color-principal;
+        background-color: $color-secundario;
+    }
+    .wsp{
+        @include max-ancho-alto(2rem,2rem);
+        position: fixed;
+        bottom: 9.5rem;
+        right: 1rem;
+        z-index: 2;
+    }
+    div{
+        .encontra{
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+    }
+    .envios{ 
+        display: flex;
+        margin-top: 1rem;
+        justify-content: space-around;
+        div{
+            .camion{
+                @include max-ancho-alto(2rem,2rem);
+            }
+            .tarjeta{
+                @include max-ancho-alto(2rem,2rem);
+            }
+            p{
+                padding: 0.2rem;
+                font-size: 0.8rem;
+            } 
+        }
+    }
+    div{
+        .pedido{
+            font-size: 1rem;
+            text-align: center;
+        }
+    }  
+}
+
+footer{
+    padding-top: 0.5rem;
+    background-color: $color-principal;
+    div{ 
+        div{display: flex;
+            justify-content: space-around;
+            img{
+                margin-top: 0.5rem;
+                @include max-ancho-alto(2rem,2rem);
+            }
+            .atencion{
+                margin-top: 0.1rem;
+            }
+        }
+        .derechos{ 
+            margin-top: 1rem;
+            text-align: center;
+        }
+    }
+}
+    
+/*estilos remeras, pantalones y buzos y camperas*/
+
+.paginas{
+    background-color: $color-fondo;
+        .elegi{
+            text-align: center;   
+        }
+
+    .productos{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "imgUno imgDos"
+                             "imgTres imgCuatro"
+                             "imgCinco imgSeis"
+                             "imgSiete imgOcho"
+                             "imgNueve imgNueve";
+                             .imgUno{
+                                grid-area: imgUno;
+                            }
+                            .imgDos{
+                                grid-area: imgDos;
+                            }
+                            .imgTres{
+                                grid-area: imgTres;
+                            }
+                            .imgCuatro{
+                                grid-area: imgCuatro;
+                            }
+                            .imgCinco{
+                                grid-area: imgCinco;
+                            }
+                            .imgSeis{
+                                grid-area: imgSeis;
+                            }
+                            .imgSiete{
+                                grid-area: imgSiete;
+                            }
+                            .imgOcho{
+                                grid-area: imgOcho;
+                            }
+                            .imgNueve{
+                                grid-area: imgNueve;
+                            }
+                        
+    }
+}
+
+section{
+    background-color: $color-fondo;
+    .talle{display: flex;
+        justify-content: space-around;
+    }
+    .cantidad{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    div{
+        text-align: center;
+        a{
+           text-decoration: none;
+           color:black
+        }
+    }
+}
+
+/*Formas de pago*/
+
+main{
+    div{
+        h2{
+            text-align: center;
+            margin-top: 1rem;
+            background-color: $color-secundario;
+            font-size: 1rem;
+        }
+        
+    }
+    div{
+        .tarjetas{
+            justify-content: space-around;
+            display: flex;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+
+        }
+        .efectivo{
+            justify-content: space-around;
+            display: flex;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        
+        }
+        
+    }
+    p{
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+   
+}
+
+/*Datos de la tarjeta*/
+
+fieldset{
+    background-color: $color-fondo;
+    legend{
+        background-color: $color-secundario;
+    }
+    .datosTarjeta{
+        display: flex;
+        margin-left: 0;
+        flex-direction: column;
+        div{
+            flex-direction: column;
+            margin: 0 0 0 0;
+            .fechaC{
+                flex-direction: row;
+                margin-left: 0; 
+            }
+        }  
+    }
+}
+
+
+/*Datos y contacto*/
+
+fieldset{
+    legend{
+        margin-top: 1rem;
+        text-align: center; 
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        textarea{
+            margin-top: 1rem;
+        }
+        
+    }
+    div{
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+}
+
+/*final de compra*/
+
+.mainFinal{
+    height: 70vh; 
+    }
+    div{
+        p{
+            text-align: center;
+        }
+        a{display: flex;
+            justify-content: center;
+            text-decoration: none;
+            .imgFinal{
+                margin-top: 2.4rem;
+                @include max-ancho-alto(2rem,2rem);
+            }
+            p{
+               margin-top: 3rem;
+               color: black;
+            }
+
+        }
+    }
+
+
+@media screen and (min-width:600px) {
+
+    /*remeras,buzos,pantalones,camperas, header y footer*/
+
+    header{ 
+        div{
+            .logo{
+                img{
+                    @include max-ancho-alto(3rem, 3rem);
+                }
+                p{
+                    font-size: 2rem;
+                }
+            }
+            nav{
+                div{
+                    div{
+                        ul{ 
+                            li{
+                                font-size: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }       
+    }
+
+    main{
+        h1{
+            font-size: 2.5rem;
+        }
+        a{
+            .wsp{
+                @include max-ancho-alto(3rem, 3rem);
+            }
+        }
+        div{
+            .descripcion{
+                color: black;
+                background-color: $color-secundario;
+                h3{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        div{
+            .encontra{
+                font-size: 1.6rem;
+            }
+        }
+        .envios{
+            div{
+                .camion{
+                    @include max-ancho-alto(3rem, 3rem);
+                }
+                .tarjeta{
+                    @include max-ancho-alto(3rem, 3rem);
+                }
+                p{
+                    font-size: 1.6rem;
+
+                }
+            }  
+        }
+        .padrePedido{
+            .pedido{
+                font-size: 1.5rem;
+
+            }
+        }
+    }
+
+    .paginas{
+        h1{
+            font-size: 2.5rem;
+        }
+        .productos{
+            margin-top: 5rem;
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "imgUno imgDos imgTres"
+                                 "imgCuatro imgCinco imgSeis"
+                                 "imgSiete imgOcho imgNueve";
+
+                                .imgUno{
+                                    grid-area: imgUno;
+                                }
+                                .imgDos{
+                                    grid-area: imgDos;
+                                }
+                                .imgTres{
+                                    grid-area: imgTres;
+                                }
+                                .imgCuatro{
+                                    grid-area: imgCuatro;
+                                }
+                                .imgCinco{
+                                    grid-area: imgCinco;
+                                }
+                                .imgSeis{
+                                    grid-area: imgSeis;
+                                }
+                                .imgSiete{
+                                    grid-area: imgSiete;
+                                }
+                                .imgOcho{
+                                    grid-area: imgOcho;
+                                }
+                                .imgNueve{
+                                    grid-area: imgNueve;
+                                }
+                            
+        }
+    }
+
+    section{
+        .talle{
+            font-size: 1.5rem;
+        }
+        .cantidad{
+            font-size: 1.5rem;
+                input{
+                    @include max-ancho-alto(10rem,5rem);
+                }
+            }
+        }
+        div{
+            a{
+               font-size: 1.5rem;
+            }
+        }
+    }
+
+
+    
+footer{
+    div{ 
+        div{display: flex;
+            justify-content: space-around;
+            img{
+                margin-top: 0.5rem;
+                @include max-ancho-alto(3.5rem,3.5rem);
+            }
+            .atencion{
+                font-size: 1.7rem;
+                margin-top: 0.1rem;
+            }
+        }
+        .derechos{ 
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+/*formas de pago*/
+
+main{
+    div{
+        h2{
+        font-size: 1.5rem;
+        }
+        p{
+           a{
+            text-decoration: none;
+            color: black;
+           }
+       }
+    } 
+    p{
+        a{
+            font-size: 1.5rem;
+        }
+    }     
+}
+
+/*datos*/
+
+fieldset{
+    div{
+        align-items: center;
+    }
+    form{
+        align-items: center;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+    }
+}    
+
+/*final de compra*/
+
+.mainFinal{
+    div{
+        p{
+           font-size: 2.3rem; 
+        }
+        a{
+            .imgFinal{
+                margin-top: 2.9rem;
+                @include max-ancho-alto(3rem,3rem);
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:992px){
+        
+    header{ 
+            nav{
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-right: 4rem;
+                }
+            }
+        }       
+    
+
+    .paginas{
+        .productos{
+            gap: 5rem;                 
+        }
+    }
+
+}
+    
+  
+   
+
+
+
+
+
+
+                       
+
+
+
+
+
+
+
+
